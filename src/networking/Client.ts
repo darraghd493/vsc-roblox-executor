@@ -24,8 +24,8 @@ class Client {
         this.handler.register(new C01AuthenticationRequest("", 0));
         this.handler.register(new C02ExecutionState(ExecutionStateId.SUCCESSFUL, "", 0));
         this.handler.register(new C03Output("", OutputId.PRINT));
-        this.handler.register(new S01AuthenticationResponse(randomBytes(32).toString('base64')));
-        this.handler.register(new S02ExecutionRequest(randomBytes(32).toString('base64'), "", 0));
+        this.handler.register(new S01AuthenticationResponse());
+        this.handler.register(new S02ExecutionRequest("", 0));
         this.handler.register(new S03Error(ErrorId.AUTHENTICATION_REQUIRED));
     }
 
